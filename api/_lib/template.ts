@@ -7,21 +7,71 @@ const twemoji = require('twemoji');
 const twOptions = { folder: 'svg', ext: '.svg' };
 const emojify = (text: string) => twemoji.parse(text, twOptions);
 
+const kreon = readFileSync(`${__dirname}/../_fonts/kreon-latin-500-normal.woff2`).toString('base64');
+const museo = readFileSync(`${__dirname}/../_fonts/museomoderno-latin-500-normal.woff2`).toString('base64');
+const inconsolata = readFileSync(`${__dirname}/../_fonts/inconsolata-latin-400-normal.woff2`).toString('base64');
+const museoBold = readFileSync(`${__dirname}/../_fonts/museomoderno-latin-700-normal.woff2`).toString('base64');
+const openSans = readFileSync(`${__dirname}/../_fonts/open-sans-latin-400-normal.woff2`).toString('base64');
+const righteous = readFileSync(`${__dirname}/../_fonts/righteous-latin-400-normal.woff2`).toString('base64');
 const rglr = readFileSync(`${__dirname}/../_fonts/Inter-Regular.woff2`).toString('base64');
 const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString('base64');
 const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString('base64');
 
 function getCss(theme: string, fontSize: string) {
-    let background = 'white';
-    let foreground = 'black';
-    let radial = 'lightgray';
+    let background = 'hsl(233, 50%, 98%)';
+    let foreground = 'hsl(233, 50%, 2%)';
+    let radial = 'hsla(233, 50%, 4%, 0.5)';
+    let flair = 'hsla(333, 80%, 40%)';
 
     if (theme === 'dark') {
-        background = 'black';
+        background = 'hsl(172, 50%, 4%)';
         foreground = 'white';
-        radial = 'dimgray';
+        radial = 'hsla(172, 50%, 96%, 0.5)';
+        flair = 'hsla(292, 80%, 60%)';
     }
     return `
+    @font-face {
+        font-family: 'Inconsolata';
+        font-style:  normal;
+        font-weight: normal;
+        src: url(data:font/woff2;charset=utf-8;base64,${inconsolata}) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Kreon';
+        font-style:  normal;
+        font-weight: 500;
+        src: url(data:font/woff2;charset=utf-8;base64,${kreon}) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'MuseoModerno';
+        font-style: normal;
+        font-weight: 500;
+        src: url(data:font/woff2;charset=utf-8;base64,${museo}) format('woff2');
+      }
+  
+    @font-face {
+      font-family: 'MuseoModerno';
+      font-style: normal;
+      font-weight: 700;
+      src: url(data:font/woff2;charset=utf-8;base64,${museoBold}) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        src: url(data:font/woff2;charset=utf-8;base64,${openSans}) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Righteous';
+        font-style:  normal;
+        font-weight: normal;
+        src: url(data:font/woff2;charset=utf-8;base64,${righteous}) format('woff2');
+    }
+
     @font-face {
         font-family: 'Inter';
         font-style:  normal;
@@ -48,15 +98,23 @@ function getCss(theme: string, fontSize: string) {
         background-image: radial-gradient(circle at 25px 25px, ${radial} 2%, transparent 0%), radial-gradient(circle at 75px 75px, ${radial} 2%, transparent 0%);
         background-size: 100px 100px;
         height: 100vh;
-        display: flex;
         text-align: center;
         align-items: center;
         justify-content: center;
     }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+
     code {
-        color: #D400FF;
-        font-family: 'Vera';
+        color: ${flair};
+        font-family: 'Inconsolata';
         white-space: pre-wrap;
         letter-spacing: -5px;
     }
@@ -77,14 +135,15 @@ function getCss(theme: string, fontSize: string) {
         margin: 0 75px;
     }
 
-    .plus {
-        color: #BBB;
-        font-family: Times New Roman, Verdana;
-        font-size: 100px;
+    .infinity {
+        color: ${radial};
+        font-family: 'Kreon', serif;
+        font-size: ${sanitizeHtml(fontSize)};
+        margin: 0.25em;
     }
 
     .spacer {
-        margin: 150px;
+        margin: ${sanitizeHtml(fontSize)};
     }
 
     .emoji {
@@ -95,7 +154,7 @@ function getCss(theme: string, fontSize: string) {
     }
     
     .heading {
-        font-family: 'Inter', sans-serif;
+        font-family: 'MuseoModerno', 'Righteous', sans-serif;
         font-size: ${sanitizeHtml(fontSize)};
         font-style: normal;
         color: ${foreground};
@@ -114,14 +173,12 @@ export function getHtml(parsedReq: ParsedRequest) {
         ${getCss(theme, fontSize)}
     </style>
     <body>
-        <div>
-            <div class="spacer">
+        <div class="container">
             <div class="logo-wrapper">
                 ${images.map((img, i) =>
-                    getPlusSign(i) + getImage(img, widths[i], heights[i])
+                    getInfinitySign(i) + getImage(img, widths[i], heights[i])
                 ).join('')}
             </div>
-            <div class="spacer">
             <div class="heading">${emojify(
                 md ? marked(text) : sanitizeHtml(text)
             )}
@@ -131,7 +188,7 @@ export function getHtml(parsedReq: ParsedRequest) {
 </html>`;
 }
 
-function getImage(src: string, width ='auto', height = '225') {
+function getImage(src: string, width ='auto', height = '300') {
     return `<img
         class="logo"
         alt="Generated Image"
@@ -141,6 +198,6 @@ function getImage(src: string, width ='auto', height = '225') {
     />`
 }
 
-function getPlusSign(i: number) {
-    return i === 0 ? '' : '<div class="plus">+</div>';
+function getInfinitySign(i: number) {
+    return i === 0 ? '' : '<div class="infinity">♾</div>';
 }

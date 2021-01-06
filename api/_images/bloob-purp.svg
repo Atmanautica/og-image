@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720px" height="720px" viewBox="0 0 720 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>gradient</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="83.5993523%" fx="50%" fy="83.5993523%" r="119.078792%" gradientTransform="translate(0.500000,0.835994),scale(1.000000,0.639138),rotate(-90.000000),translate(-0.500000,-0.835994)" id="radialGradient-1">
+            <stop stop-color="#000000" stop-opacity="0.8" offset="0%"></stop>
+            <stop stop-color="#5D17D9" offset="100%"></stop>
+        </radialGradient>
+        <path d="M178,0 C59.3333333,137.297421 0,259.527977 0,366.691667 C0,484.446132 89,557 178,557 C267,557 356,484.446132 356,366.691667 C356,259.527977 296.666667,137.297421 178,0 Z" id="path-2"></path>
+        <linearGradient x1="50%" y1="-12.8188743%" x2="50%" y2="74.715473%" id="linearGradient-4">
+            <stop stop-color="#1695C5" offset="0%"></stop>
+            <stop stop-color="#3B0797" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="236.468561%" cy="-54.9297797%" fx="236.468561%" fy="-54.9297797%" r="290.398119%" gradientTransform="translate(2.364686,-0.549298),scale(1.000000,0.919118),rotate(144.517313),scale(1.000000,0.786856),translate(-2.364686,0.549298)" id="radialGradient-5">
+            <stop stop-color="#1695C5" offset="0%"></stop>
+            <stop stop-color="#3164CD" offset="64.8231926%"></stop>
+            <stop stop-color="#5D17D9" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="-141.511331%" cy="-60.0248359%" fx="-141.511331%" fy="-60.0248359%" r="297.726347%" gradientTransform="translate(-1.415113,-0.600248),scale(1.000000,0.919118),rotate(35.788068),translate(1.415113,0.600248)" id="radialGradient-6">
+            <stop stop-color="#1695C5" offset="0%"></stop>
+            <stop stop-color="#3164CD" offset="66.2745457%"></stop>
+            <stop stop-color="#5D17D9" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="50.0258137%" y1="0.645466887%" x2="50%" y2="94.3663859%" id="linearGradient-7">
+            <stop stop-color="#5D17D9" offset="0.0343116554%"></stop>
+            <stop stop-color="#5B16D4" offset="11.9604994%"></stop>
+            <stop stop-color="#4D13B2" offset="22.783749%"></stop>
+            <stop stop-color="#2972CA" offset="61.3404181%"></stop>
+            <stop stop-color="#4C35D5" offset="86.8910099%"></stop>
+            <stop stop-color="#5524D7" offset="100%"></stop>
+        </linearGradient>
+        <path d="M299,0.5 C183.666667,135.578971 126,255.834527 126,361.266667 C126,477.118457 212.5,548.5 299,548.5 C385.5,548.5 472,477.118457 472,361.266667 C472,255.834527 414.333333,135.578971 299,0.5 Z" id="path-8"></path>
+        <radialGradient cx="50%" cy="-13.0120677%" fx="50%" fy="-13.0120677%" r="113.012068%" gradientTransform="translate(0.500000,-0.130121),scale(0.485380,1.000000),rotate(90.000000),translate(-0.500000,0.130121)" id="radialGradient-10">
+            <stop stop-color="#1695C5" offset="0%"></stop>
+            <stop stop-color="#5D17D9" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-11">
+            <stop stop-color="#5D17D9" offset="0%"></stop>
+            <stop stop-color="#1695C5" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-12">
+            <stop stop-color="#817C8A" offset="0%"></stop>
+            <stop stop-color="#551AC0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="gradient" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="purp-new" transform="translate(61.000000, 82.000000)">
+            <g id="drop" transform="translate(121.000000, 0.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="drop-fill" fill-opacity="0.75" fill="url(#radialGradient-1)" fill-rule="nonzero" xlink:href="#path-2"></use>
+                <path d="M-90,409.94993 C-60.2222222,409.94993 -30.4444444,373.299954 -0.666666667,300 C21.5547271,354.699419 124.4,519.899861 178,300 C231.6,519.899861 334.221394,355.250512 356.666667,300 C401.333333,409.94993 446,409.94993 446,409.94993 C446,409.94993 431.119051,565 178,565 C9.25396621,565 -80.0793671,513.316643 -90,409.94993 Z" id="wave-center" fill="url(#linearGradient-4)" fill-rule="nonzero" mask="url(#mask-3)"></path>
+            </g>
+            <g id="case" transform="translate(0.000000, 4.000000)">
+                <g id="wings" transform="translate(0.000000, 292.000000)" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" stroke-width="12">
+                    <path d="M125,0.00825701249 C46.7514198,30.3836699 8.87265528,129.51518 0,132.553099 C37.7207427,153.269172 103.950022,71.4078729 121.997956,129.284529 C111.300004,59.0848224 124.623992,-0.80852439 125,0.00825701249 Z" id="wing-left" stroke="url(#radialGradient-5)" fill="url(#radialGradient-5)"></path>
+                    <path d="M472,0.00825701249 C550.24858,30.3836699 588.127345,129.51518 597,132.553099 C559.279257,153.269172 493.049978,71.4078729 475.002044,129.284529 C485.699996,59.0848224 472.376008,-0.80852439 472,0.00825701249 Z" id="wing-right" stroke="url(#radialGradient-6)" fill="url(#radialGradient-6)"></path>
+                </g>
+                <mask id="mask-9" fill="white">
+                    <use xlink:href="#path-8"></use>
+                </mask>
+                <path stroke="url(#linearGradient-7)" stroke-width="20" d="M306.605033,-5.99334079 C423.341648,130.729161 482,253.052734 482,361.266667 C482,418.976842 461.322783,469.208492 424.996478,505.410892 C390.951314,539.339932 345.264283,558.5 299,558.5 C252.735717,558.5 207.048686,539.339932 173.003522,505.410892 C136.677217,469.208492 116,418.976842 116,361.266667 C116,253.052734 174.658352,130.729161 291.394967,-5.99334079 L299,-14.900393 L306.605033,-5.99334079 Z"></path>
+                <path d="M41,414.906146 C132.2,473.510244 189.2,444.208195 212,327 C246.2,502.812292 348.8,502.812292 383,327 C405.8,444.208195 462.8,473.510244 554,414.906146 C503.742378,522.302049 418.242378,576 297.5,576 C176.757622,576 91.2576217,522.302049 41,414.906146 Z" id="wave-around" fill="url(#radialGradient-10)" fill-rule="nonzero" mask="url(#mask-9)"></path>
+            </g>
+            <g id="ajnas" transform="translate(230.000000, 140.000000)">
+                <g id="ajna-1/2" transform="translate(0.000000, -0.000000)">
+                    <circle id="white" fill="url(#radialGradient-11)" cx="69" cy="69" r="69"></circle>
+                    <circle id="iris" fill="url(#radialGradient-12)" cx="69" cy="69" r="46"></circle>
+                    <circle id="pupil" fill="#000000" cx="69" cy="69" r="24"></circle>
+                    <circle id="dot" fill="#FFFFFF" cx="69" cy="69" r="6"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -2,6 +2,36 @@
 # yarn lockfile v1
 
 
+"@fontsource/aleo@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/aleo/-/aleo-4.1.0.tgz#133b4bb30504a01a13dd09dde759c5e3b27842d0"
+  integrity sha512-wzKjCcw2QQ891RPMy1rWToTD6z2SWcBdUCFCRkquC1aZKbsgD3DuzCqmkxds5fwJ2IUK+wbRDb6eHl1SAqIUOA==
+
+"@fontsource/inconsolata@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/inconsolata/-/inconsolata-4.1.0.tgz#968617ff247bd481de594d5316cdd60d73e398f6"
+  integrity sha512-tnG6MuO/DEUZ8KyuR//R3Q6U6lpb7S46kYyGRtG/qIAqRv9eTuDH5dThkuR4v+AmIykdFdwNMs3UN2D5aCkQWg==
+
+"@fontsource/kreon@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/kreon/-/kreon-4.1.0.tgz#1a94e46c001a8ec35fba66537290f5a0ec9f0e39"
+  integrity sha512-xrO3MGozcF/FGHSEzIFnPB/OjSezY4fGhcoPWKp7kGzqtUkmi9wu0SRJ0oOL1z9Nkki4XmE+76dS2eppdB1zuw==
+
+"@fontsource/museomoderno@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/museomoderno/-/museomoderno-4.1.0.tgz#1e59b0f50993188d173da2a5d485519cc274ab9b"
+  integrity sha512-+KdjmkhHuPrNTBEcLMp+LdSFwJEa2jGn77vT+WtPniZgCTY/F4epHzF0xd/KGEnbQegeQ0s6HUYZ7JX6430s5A==
+
+"@fontsource/open-sans@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.1.0.tgz#d44b4495bd23d78018675e4e79973894e393c0ed"
+  integrity sha512-sWDAAr6ESHJdBKXse6njvZem4sTZLILkugaEfAvpdFiaKBh2RnXTa4DJllDh5LzP0MLMUrfj/JAjMbKxWFo6pQ==
+
+"@fontsource/righteous@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/righteous/-/righteous-4.1.0.tgz#d6ed024a26d71eeec0bfd5c5f031ea533a9d9774"
+  integrity sha512-gncLch57xWmNoXHgTNsWrwK0eAkD51BmuYjnDdB8i4kj6bnOZzT7zASI5AE16miHUZKEWnN86vXfbDsNY3T0qQ==
+
 "@types/marked@0.7.3":
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/@types/marked/-/marked-0.7.3.tgz#3859f6fea52a2b73f42283018bd34b03f3c4fb3f"

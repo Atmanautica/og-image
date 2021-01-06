@@ -5,7 +5,7 @@
   "private": true,
   "license": "CC-SA-BY-NA-4.0",
   "engines": {
-    "node": "15.x"
+    "node": "12.x"
   },
   "scripts": {
     "build": "tsc -p api/tsconfig.json && tsc -p web/tsconfig.json"

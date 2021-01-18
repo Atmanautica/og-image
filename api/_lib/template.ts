@@ -7,24 +7,21 @@ const twemoji = require('twemoji');
 const twOptions = { folder: 'svg', ext: '.svg' };
 const emojify = (text: string) => twemoji.parse(text, twOptions);
 
-const kreon = readFileSync(`${__dirname}/../_fonts/kreon-latin-500-normal.woff2`).toString('base64');
 const museo = readFileSync(`${__dirname}/../_fonts/museomoderno-latin-500-normal.woff2`).toString('base64');
 const inconsolata = readFileSync(`${__dirname}/../_fonts/inconsolata-latin-400-normal.woff2`).toString('base64');
 const museoBold = readFileSync(`${__dirname}/../_fonts/museomoderno-latin-700-normal.woff2`).toString('base64');
-const openSans = readFileSync(`${__dirname}/../_fonts/open-sans-latin-400-normal.woff2`).toString('base64');
-const righteous = readFileSync(`${__dirname}/../_fonts/righteous-latin-400-normal.woff2`).toString('base64');
 const rglr = readFileSync(`${__dirname}/../_fonts/Inter-Regular.woff2`).toString('base64');
 const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString('base64');
 const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString('base64');
 
 function getCss(theme: string, fontSize: string) {
-    let background = 'hsl(233, 50%, 98%)';
+    let background = "hsl(233, 50%, 98%) url('https://atmanaut.sirv.com/_images/waves-light.jpg')";
     let foreground = 'hsl(233, 50%, 2%)';
     let radial = 'hsla(233, 50%, 4%, 0.5)';
     let flair = 'hsla(333, 80%, 40%)';
 
     if (theme === 'dark') {
-        background = 'hsl(172, 50%, 4%)';
+        background = "hsl(172, 50%, 4%) url('https://atmanaut.sirv.com/_images/waves-pad.jpg');"
         foreground = 'white';
         radial = 'hsla(172, 50%, 96%, 0.5)';
         flair = 'hsla(292, 80%, 60%)';
@@ -35,13 +32,6 @@ function getCss(theme: string, fontSize: string) {
         font-style:  normal;
         font-weight: normal;
         src: url(data:font/woff2;charset=utf-8;base64,${inconsolata}) format('woff2');
-    }
-
-    @font-face {
-        font-family: 'Kreon';
-        font-style:  normal;
-        font-weight: 500;
-        src: url(data:font/woff2;charset=utf-8;base64,${kreon}) format('woff2');
     }
 
     @font-face {
@@ -56,20 +46,6 @@ function getCss(theme: string, fontSize: string) {
       font-style: normal;
       font-weight: 700;
       src: url(data:font/woff2;charset=utf-8;base64,${museoBold}) format('woff2');
-    }
-
-    @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        src: url(data:font/woff2;charset=utf-8;base64,${openSans}) format('woff2');
-    }
-
-    @font-face {
-        font-family: 'Righteous';
-        font-style:  normal;
-        font-weight: normal;
-        src: url(data:font/woff2;charset=utf-8;base64,${righteous}) format('woff2');
     }
 
     @font-face {
@@ -95,8 +71,9 @@ function getCss(theme: string, fontSize: string) {
 
     body {
         background: ${background};
-        background-image: radial-gradient(circle at 25px 25px, ${radial} 2%, transparent 0%), radial-gradient(circle at 75px 75px, ${radial} 2%, transparent 0%);
-        background-size: 100px 100px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
         height: 100vh;
         text-align: center;
         align-items: center;
@@ -137,7 +114,7 @@ function getCss(theme: string, fontSize: string) {
 
     .infinity {
         color: ${radial};
-        font-family: 'Kreon', serif;
+        font-family: 'Inter', serif;
         font-size: ${sanitizeHtml(fontSize)};
         margin: 0.25em;
     }
@@ -154,11 +131,12 @@ function getCss(theme: string, fontSize: string) {
     }
     
     .heading {
-        font-family: 'MuseoModerno', 'Righteous', sans-serif;
+        font-family: 'MuseoModerno', sans-serif;
         font-size: ${sanitizeHtml(fontSize)};
         font-style: normal;
         color: ${foreground};
-        line-height: 1.8;
+        line-height: 1.25;
+        margin-top: -0.25em;
     }`;
 }
 
@@ -199,5 +177,5 @@ function getImage(src: string, width ='auto', height = '300') {
 }
 
 function getInfinitySign(i: number) {
-    return i === 0 ? '' : '<div class="infinity">♾</div>';
+    return i === 0 ? '' : '<div class="infinity">✧</div>';
 }

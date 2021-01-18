@@ -2,6 +2,8 @@
 
 # [Open Graph Image as a Service](https://og-image.vercel.app)
 
+Adapted cosmetically to suit Atmanautica and its various offerings.
+
 <a href="https://twitter.com/vercel">
     <img align="right" src="https://og-image.atmanaut.us/tweet.png" height="300" />
 </a>

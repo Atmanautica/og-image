@@ -5,14 +5,14 @@ body {
 
 a {
     cursor: pointer;
-    color: #0076FF;
+    color: rgb(27, 217, 217);
     text-decoration: none;
     transition: all 0.2s ease;
     border-bottom: 1px solid white;
 }
 
 a:hover {
-    border-bottom: 1px solid #0076FF;
+    border-bottom: 1px solid rgb(27, 217, 217);
 }
 
 footer {
@@ -246,7 +246,7 @@ label {
     height: 60px;
     align-items: center;
     justify-content: space-between;
-    
+
     box-shadow: 0 4px 9px rgba(0,0,0,0.12);
     font-size: 14px;
     display: flex;
@@ -292,7 +292,7 @@ img {
 
 @media (max-width: 900px) {
     .split {
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
     }
 
     .field-label {

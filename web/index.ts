@@ -158,11 +158,11 @@ const imageLightOptions: DropdownOption[] = [
 	},
 	{
 		text: 'Constellation',
-		value: 'https://atmanaut.sirv.com/logos/constellation-black.svg',
+		value: 'https://atmanaut.sirv.com/logos/Constellation-black.svg',
 	},
 	{
 		text: 'Constellation Mono',
-		value: 'https://atmanaut.sirv.com/logos/constellation-black-mono.svg',
+		value: 'https://atmanaut.sirv.com/logos/Constellation-black-mono.svg',
 	},
 	{
 		text: 'Constellation Walk',
@@ -202,7 +202,7 @@ const imageDarkOptions: DropdownOption[] = [
 	},
 	{
 		text: 'Constellation',
-		value: 'https://atmanaut.sirv.com/logos/constellation-white.svg',
+		value: 'https://atmanaut.sirv.com/logos/Constellation-white.svg',
 	},
 	{
 		text: 'Atmanaut',
@@ -217,7 +217,7 @@ const imageDarkOptions: DropdownOption[] = [
 		value: 'https://atmanaut.sirv.com/logos/Summon-white.svg',
 	},
 	{
-		text: 'Summon Mono',
+		text: 'Summon Metal',
 		value: 'https://atmanaut.sirv.com/logos/Summon-metal.svg',
 	},
 	{
@@ -225,7 +225,6 @@ const imageDarkOptions: DropdownOption[] = [
 		value: 'https://atmanaut.sirv.com/logos/Summon-logo.svg',
 	},
 	{ text: 'Nameless', value: 'https://atmanaut.sirv.com/_images/bagua.svg' },
-	{ text: 'Summon', value: 'https://atmanaut.sirv.com/logos/Summon-logo.svg' },
 	{
 		text: 'Full Smile',
 		value: 'https://atmanaut.sirv.com/_images/full-smile.png',

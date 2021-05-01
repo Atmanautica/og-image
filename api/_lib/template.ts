@@ -26,13 +26,13 @@ const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString(
 )
 
 function getCss(theme: string, fontSize: string) {
-	// let background = "hsl(233, 50%, 98%) url('https://atmanaut.sirv.com/_images/waves-light.jpg')";
+	let background = 'hsl(233, 50%, 98%)'
 	let foreground = 'hsl(233, 50%, 2%)'
 	let radial = 'hsla(233, 50%, 4%, 0.5)'
 	let flair = 'hsla(333, 80%, 40%)'
 
 	if (theme === 'dark') {
-		// background = "hsl(172, 50%, 4%) url('https://atmanaut.sirv.com/_images/waves-pad.jpg');"
+		background = 'hsl(172, 50%, 4%)'
 		foreground = 'white'
 		radial = 'hsla(172, 50%, 96%, 0.5)'
 		flair = 'hsla(292, 80%, 60%)'
@@ -81,6 +81,7 @@ function getCss(theme: string, fontSize: string) {
       }
 
     body {
+        background: '${background}';
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;

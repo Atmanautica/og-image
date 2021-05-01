@@ -1,31 +1,27 @@
 {
-  "name": "og-image-atmanaut",
-  "forked": "https://github.com/vercel/og-image",
-  "author": "Kerry Snyder <kerry@atmanaut.me>",
-  "private": true,
-  "license": "CC-SA-BY-NA-4.0",
-  "engines": {
-    "node": "12.x"
-  },
-  "scripts": {
-    "build": "tsc -p api/tsconfig.json && tsc -p web/tsconfig.json"
-  },
-  "dependencies": {
-    "@fontsource/aleo": "4.1.0",
-    "@fontsource/inconsolata": "4.1.0",
-    "@fontsource/kreon": "4.1.0",
-    "@fontsource/museomoderno": "4.1.0",
-    "@fontsource/open-sans": "4.1.0",
-    "@fontsource/righteous": "4.1.0",
-    "chrome-aws-lambda": "2.1.1",
-    "marked": "0.8.2",
-    "puppeteer-core": "2.1.1",
-    "twemoji": "12.1.5"
-  },
-  "devDependencies": {
-    "@types/marked": "0.7.3",
-    "@types/puppeteer": "2.0.1",
-    "@types/puppeteer-core": "2.0.0",
-    "typescript": "3.8.3"
-  }
+	"name": "og-image-atmanaut",
+	"forked": "https://github.com/vercel/og-image",
+	"author": "Kerry Snyder <kerry@atmanaut.me>",
+	"private": true,
+	"license": "CC-SA-BY-NA-4.0",
+	"engines": {
+		"node": "12.x"
+	},
+	"scripts": {
+		"build": "tsc -p api/tsconfig.json && tsc -p web/tsconfig.json"
+	},
+	"dependencies": {
+		"@fontsource/inconsolata": "4.1.0",
+		"@fontsource/museomoderno": "4.1.0",
+		"chrome-aws-lambda": "2.1.1",
+		"marked": "0.8.2",
+		"puppeteer-core": "2.1.1",
+		"twemoji": "12.1.5"
+	},
+	"devDependencies": {
+		"@types/marked": "0.7.3",
+		"@types/puppeteer": "2.0.1",
+		"@types/puppeteer-core": "2.0.0",
+		"typescript": "3.8.3"
+	}
 }

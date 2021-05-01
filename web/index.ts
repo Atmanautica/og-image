@@ -150,11 +150,11 @@ const markdownOptions: DropdownOption[] = [
 const imageLightOptions: DropdownOption[] = [
 	{
 		text: 'Easeness',
-		value: 'https://atmanaut.sirv.com/logos/easeness-kite-black.svg',
+		value: 'https://atmanaut.sirv.com/logos/Easeness-fav.svg',
 	},
 	{
-		text: 'Easeness',
-		value: 'https://atmanaut.sirv.com/logos/Easeness-fav.svg',
+		text: 'Easeness Mono',
+		value: 'https://atmanaut.sirv.com/logos/easeness-kite-black.svg',
 	},
 	{
 		text: 'Constellation',
@@ -169,26 +169,26 @@ const imageLightOptions: DropdownOption[] = [
 		value: 'https://atmanaut.sirv.com/logos/logo-commonplace-walk.svg',
 	},
 	{
-		text: 'Atmanaut Mono',
-		value: 'https://atmanaut.sirv.com/_images/bloob-black.png',
-	},
-	{
 		text: 'Atmanaut Blue',
 		value: 'https://atmanaut.sirv.com/logos/bloobicon.svg',
 	},
 	{
-		text: 'Summon Mono',
-		value: 'https://atmanaut.sirv.com/logos/Summon-black.svg',
+		text: 'Atmanaut Mono',
+		value: 'https://atmanaut.sirv.com/_images/bloob-black.png',
 	},
 	{
 		text: 'Summon',
 		value: 'https://atmanaut.sirv.com/logos/Summon-logo.svg',
 	},
 	{
+		text: 'Summon Mono',
+		value: 'https://atmanaut.sirv.com/logos/Summon-black.svg',
+	},
+	{ text: 'Nameless', value: 'https://atmanaut.sirv.com/_images/bagua.svg' },
+	{
 		text: 'Nameless Mono',
 		value: 'https://atmanaut.sirv.com/logos/bagua-black-mono.svg',
 	},
-	{ text: 'Nameless', value: 'https://atmanaut.sirv.com/_images/bagua.svg' },
 	{
 		text: 'Full Smile',
 		value: 'https://atmanaut.sirv.com/_images/full-smile.svg',
@@ -198,6 +198,10 @@ const imageLightOptions: DropdownOption[] = [
 const imageDarkOptions: DropdownOption[] = [
 	{
 		text: 'Easeness',
+		value: 'https://atmanaut.sirv.com/logos/Easeness-fav.svg',
+	},
+	{
+		text: 'Easeness Mono',
 		value: 'https://atmanaut.sirv.com/logos/easeness-kite-white.svg',
 	},
 	{
@@ -206,11 +210,20 @@ const imageDarkOptions: DropdownOption[] = [
 	},
 	{
 		text: 'Atmanaut',
+		value: 'https://atmanaut.sirv.com/logos/bloobicon.svg',
+	},
+	{
+		text: 'Atmanaut Mono',
 		value: 'https://atmanaut.sirv.com/_images/bloob-white.png',
 	},
+	{ text: 'Nameless', value: 'https://atmanaut.sirv.com/_images/bagua.svg' },
 	{
 		text: 'Nameless Mono',
 		value: 'https://atmanaut.sirv.com/logos/bagua-white-mono.svg',
+	},
+	{
+		text: 'Summon',
+		value: 'https://atmanaut.sirv.com/logos/Summon-logo.svg',
 	},
 	{
 		text: 'Summon Mono',
@@ -220,11 +233,6 @@ const imageDarkOptions: DropdownOption[] = [
 		text: 'Summon Metal',
 		value: 'https://atmanaut.sirv.com/logos/Summon-metal.svg',
 	},
-	{
-		text: 'Summon',
-		value: 'https://atmanaut.sirv.com/logos/Summon-logo.svg',
-	},
-	{ text: 'Nameless', value: 'https://atmanaut.sirv.com/_images/bagua.svg' },
 	{
 		text: 'Full Smile',
 		value: 'https://atmanaut.sirv.com/_images/full-smile.png',

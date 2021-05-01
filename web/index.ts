@@ -149,8 +149,44 @@ const markdownOptions: DropdownOption[] = [
 
 const imageLightOptions: DropdownOption[] = [
 	{
-		text: 'Atmanaut',
+		text: 'Easeness',
+		value: 'https://atmanaut.sirv.com/logos/easeness-kite-black.svg',
+	},
+	{
+		text: 'Easeness',
+		value: 'https://atmanaut.sirv.com/logos/Easeness-fav.svg',
+	},
+	{
+		text: 'Constellation',
+		value: 'https://atmanaut.sirv.com/logos/constellation-black.svg',
+	},
+	{
+		text: 'Constellation Mono',
+		value: 'https://atmanaut.sirv.com/logos/constellation-black-mono.svg',
+	},
+	{
+		text: 'Constellation Walk',
+		value: 'https://atmanaut.sirv.com/logos/logo-commonplace-walk.svg',
+	},
+	{
+		text: 'Atmanaut Mono',
 		value: 'https://atmanaut.sirv.com/_images/bloob-black.png',
+	},
+	{
+		text: 'Atmanaut Blue',
+		value: 'https://atmanaut.sirv.com/logos/bloobicon.svg',
+	},
+	{
+		text: 'Summon Mono',
+		value: 'https://atmanaut.sirv.com/logos/Summon-black.svg',
+	},
+	{
+		text: 'Summon',
+		value: 'https://atmanaut.sirv.com/logos/Summon-logo.svg',
+	},
+	{
+		text: 'Nameless Mono',
+		value: 'https://atmanaut.sirv.com/logos/bagua-black-mono.svg',
 	},
 	{ text: 'Nameless', value: 'https://atmanaut.sirv.com/_images/bagua.svg' },
 	{
@@ -161,10 +197,35 @@ const imageLightOptions: DropdownOption[] = [
 
 const imageDarkOptions: DropdownOption[] = [
 	{
+		text: 'Easeness',
+		value: 'https://atmanaut.sirv.com/logos/easeness-kite-white.svg',
+	},
+	{
+		text: 'Constellation',
+		value: 'https://atmanaut.sirv.com/logos/constellation-white.svg',
+	},
+	{
 		text: 'Atmanaut',
 		value: 'https://atmanaut.sirv.com/_images/bloob-white.png',
 	},
+	{
+		text: 'Nameless Mono',
+		value: 'https://atmanaut.sirv.com/logos/bagua-white-mono.svg',
+	},
+	{
+		text: 'Summon Mono',
+		value: 'https://atmanaut.sirv.com/logos/Summon-white.svg',
+	},
+	{
+		text: 'Summon Mono',
+		value: 'https://atmanaut.sirv.com/logos/Summon-metal.svg',
+	},
+	{
+		text: 'Summon',
+		value: 'https://atmanaut.sirv.com/logos/Summon-logo.svg',
+	},
 	{ text: 'Nameless', value: 'https://atmanaut.sirv.com/_images/bagua.svg' },
+	{ text: 'Summon', value: 'https://atmanaut.sirv.com/logos/Summon-logo.svg' },
 	{
 		text: 'Full Smile',
 		value: 'https://atmanaut.sirv.com/_images/full-smile.png',
@@ -228,7 +289,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
 		fontSize = '100px',
 		theme = 'dark',
 		md = true,
-		text = 'Welcome **Atmanaut**',
+		text = 'Acme Gizmo™',
 		images = [imageDarkOptions[0].value],
 		widths = [],
 		heights = [],

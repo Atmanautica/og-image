@@ -1,32 +1,43 @@
+import { readFileSync } from 'fs'
+import marked from 'marked'
+import { sanitizeHtml } from './sanitizer'
+import { ParsedRequest } from './types'
+const twemoji = require('twemoji')
+const twOptions = { folder: 'svg', ext: '.svg' }
+const emojify = (text: string) => twemoji.parse(text, twOptions)
 
-import { readFileSync } from 'fs';
-import marked from 'marked';
-import { sanitizeHtml } from './sanitizer';
-import { ParsedRequest } from './types';
-const twemoji = require('twemoji');
-const twOptions = { folder: 'svg', ext: '.svg' };
-const emojify = (text: string) => twemoji.parse(text, twOptions);
-
-const museo = readFileSync(`${__dirname}/../_fonts/museomoderno-latin-500-normal.woff2`).toString('base64');
-const inconsolata = readFileSync(`${__dirname}/../_fonts/inconsolata-latin-400-normal.woff2`).toString('base64');
-const museoBold = readFileSync(`${__dirname}/../_fonts/museomoderno-latin-700-normal.woff2`).toString('base64');
-const rglr = readFileSync(`${__dirname}/../_fonts/Inter-Regular.woff2`).toString('base64');
-const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString('base64');
-const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString('base64');
+const museo = readFileSync(
+	`${__dirname}/../_fonts/museomoderno-latin-500-normal.woff2`
+).toString('base64')
+const inconsolata = readFileSync(
+	`${__dirname}/../_fonts/inconsolata-latin-400-normal.woff2`
+).toString('base64')
+const museoBold = readFileSync(
+	`${__dirname}/../_fonts/museomoderno-latin-700-normal.woff2`
+).toString('base64')
+const rglr = readFileSync(
+	`${__dirname}/../_fonts/Inter-Regular.woff2`
+).toString('base64')
+const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString(
+	'base64'
+)
+const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString(
+	'base64'
+)
 
 function getCss(theme: string, fontSize: string) {
-    let background = "hsl(233, 50%, 98%) url('https://atmanaut.sirv.com/_images/waves-light.jpg')";
-    let foreground = 'hsl(233, 50%, 2%)';
-    let radial = 'hsla(233, 50%, 4%, 0.5)';
-    let flair = 'hsla(333, 80%, 40%)';
+	// let background = "hsl(233, 50%, 98%) url('https://atmanaut.sirv.com/_images/waves-light.jpg')";
+	let foreground = 'hsl(233, 50%, 2%)'
+	let radial = 'hsla(233, 50%, 4%, 0.5)'
+	let flair = 'hsla(333, 80%, 40%)'
 
-    if (theme === 'dark') {
-        background = "hsl(172, 50%, 4%) url('https://atmanaut.sirv.com/_images/waves-pad.jpg');"
-        foreground = 'white';
-        radial = 'hsla(172, 50%, 96%, 0.5)';
-        flair = 'hsla(292, 80%, 60%)';
-    }
-    return `
+	if (theme === 'dark') {
+		// background = "hsl(172, 50%, 4%) url('https://atmanaut.sirv.com/_images/waves-pad.jpg');"
+		foreground = 'white'
+		radial = 'hsla(172, 50%, 96%, 0.5)'
+		flair = 'hsla(292, 80%, 60%)'
+	}
+	return `
     @font-face {
         font-family: 'Inconsolata';
         font-style:  normal;
@@ -39,13 +50,13 @@ function getCss(theme: string, fontSize: string) {
         font-style: normal;
         font-weight: 500;
         src: url(data:font/woff2;charset=utf-8;base64,${museo}) format('woff2');
-      }
-  
+    }
+
     @font-face {
-      font-family: 'MuseoModerno';
-      font-style: normal;
-      font-weight: 700;
-      src: url(data:font/woff2;charset=utf-8;base64,${museoBold}) format('woff2');
+        font-family: 'MuseoModerno';
+        font-style: normal;
+        font-weight: 700;
+        src: url(data:font/woff2;charset=utf-8;base64,${museoBold}) format('woff2');
     }
 
     @font-face {
@@ -70,7 +81,6 @@ function getCss(theme: string, fontSize: string) {
       }
 
     body {
-        background: ${background};
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -129,7 +139,7 @@ function getCss(theme: string, fontSize: string) {
         margin: 0 .05em 0 .1em;
         vertical-align: -0.1em;
     }
-    
+
     .heading {
         font-family: 'MuseoModerno', sans-serif;
         font-size: ${sanitizeHtml(fontSize)};
@@ -137,12 +147,12 @@ function getCss(theme: string, fontSize: string) {
         color: ${foreground};
         line-height: 1.25;
         margin-top: -0.25em;
-    }`;
+    }`
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
-    const { text, theme, md, fontSize, images, widths, heights } = parsedReq;
-    return `<!DOCTYPE html>
+	const { text, theme, md, fontSize, images, widths, heights } = parsedReq
+	return `<!DOCTYPE html>
 <html>
     <meta charset="utf-8">
     <title>Generated Image</title>
@@ -153,21 +163,24 @@ export function getHtml(parsedReq: ParsedRequest) {
     <body>
         <div class="container">
             <div class="logo-wrapper">
-                ${images.map((img, i) =>
-                    getInfinitySign(i) + getImage(img, widths[i], heights[i])
-                ).join('')}
+                ${images
+									.map(
+										(img, i) =>
+											getInfinitySign(i) + getImage(img, widths[i], heights[i])
+									)
+									.join('')}
             </div>
             <div class="heading">${emojify(
-                md ? marked(text) : sanitizeHtml(text)
-            )}
+							md ? marked(text) : sanitizeHtml(text)
+						)}
             </div>
         </div>
     </body>
-</html>`;
+</html>`
 }
 
-function getImage(src: string, width ='auto', height = '300') {
-    return `<img
+function getImage(src: string, width = 'auto', height = '300') {
+	return `<img
         class="logo"
         alt="Generated Image"
         src="${sanitizeHtml(src)}"
@@ -177,5 +190,5 @@ function getImage(src: string, width ='auto', height = '300') {
 }
 
 function getInfinitySign(i: number) {
-    return i === 0 ? '' : '<div class="infinity">✧</div>';
+	return i === 0 ? '' : '<div class="infinity">✧</div>'
 }
